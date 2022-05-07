@@ -3,32 +3,24 @@
 import java.io.IOException;
 
 public class IntroSort {
-
-    public IntroSort(int[] arr)
-    {
-
-        int n = arr.length;
-        a = new int[n];
-        this.n = 0;
-        for (int i = 0; i < n; i++) {
-            dataAppend(arr[i]);
-        }
-
-        sortData();
-        printData();
-    }
     // the actual data that has to be sorted
     private int a[];
 
     // the number of elements in the data
     private int n;
-
-    // The utility function to insert the data
-    private void dataAppend(int temp)
+    public IntroSort(int[] arr)
     {
-        a[n] = temp;
-        n++;
+
+        n = arr.length;
+
+        a = arr;
+        //printData();
+        sortData();
+        //printData();
     }
+
+
+
 
     // The utility function to swap two elements
     private void swap(int i, int j)
@@ -163,11 +155,12 @@ public class IntroSort {
             }
 
             depthLimit = depthLimit - 1;
+            /*
             int pivot = findPivot(begin,
                     begin + ((end - begin) / 2) + 1,
                     end);
             swap(pivot, end);
-
+            */
             // p is partitioning index,
             // arr[p] is now at right place
             int p = partition(begin, end);
@@ -204,6 +197,7 @@ public class IntroSort {
     {
         for (int i = 0; i < n; i++)
             System.out.print(a[i] + " ");
+        System.out.println();
     }
 
 }

@@ -3,14 +3,14 @@ class ShellSort
 {
     public ShellSort(int[] arr)
     {
-        printArray(arr);
+        //printArray(arr);
         sort(arr);
-        System.out.println("Array after sorting");
-        printArray(arr);
+        //System.out.println("Array after sorting");
+        //printArray(arr);
     }
 
     /* An utility function to print array of size n*/
-    static void printArray(int arr[])
+    private static void printArray(int arr[])
     {
         int n = arr.length;
         for (int i=0; i<n; ++i)
@@ -19,7 +19,7 @@ class ShellSort
     }
 
     /* function to sort arr using shellSort */
-    int sort(int arr[])
+    private void sort(int arr[])
     {
         int n = arr.length;
 
@@ -48,8 +48,5 @@ class ShellSort
                 arr[j] = temp;
             }
         }
-        return 0;
     }
-
-
 }

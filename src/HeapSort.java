@@ -3,11 +3,11 @@ public class HeapSort {
     public HeapSort(int[] arr)
     {
         int n = arr.length;
-
+        //printArray(arr);
         sort(arr);
 
-        System.out.println("Sorted array is");
-        printArray(arr);
+        //System.out.println("Sorted array is");
+        //printArray(arr);
     }
     public void sort(int arr[])
     {
@@ -31,7 +31,7 @@ public class HeapSort {
 
     // To heapify a subtree rooted with node i which is
     // an index in arr[]. n is size of heap
-    void heapify(int arr[], int n, int i)
+    private void heapify(int arr[], int n, int i)
     {
         int largest = i; // Initialize largest as root
         int l = 2 * i + 1; // left = 2*i + 1
@@ -57,7 +57,7 @@ public class HeapSort {
     }
 
     /* A utility function to print array of size n */
-    static void printArray(int arr[])
+    private static void printArray(int arr[])
     {
         int n = arr.length;
         for (int i = 0; i < n; ++i)
